@@ -18,7 +18,9 @@
   "homepage": "https://github.com/ULL-ESIT-DSI-1617/sessions-y-autenticacion-en-expressjs-jimmy-fernando#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "express-session": "^1.15.1",
     "pug": "^2.0.0-beta11"
   }
 }
