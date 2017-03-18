@@ -8,6 +8,9 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 app.use(express.static('public'));
 
+app.get('/',(req,res)=>{
+    res.render('index');
+})
 app.listen(port, (err)=>{
     if(err){
         console.error(err);
