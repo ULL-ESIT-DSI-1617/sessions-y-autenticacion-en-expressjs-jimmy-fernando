@@ -72,6 +72,25 @@ var auth = function(req, res, next) {
     return res.sendStatus(401);
 };
 
+app.get('/change', [auth, (req, res)=>{
+  res.render('change');
+}]);
+
+app.post('/change', (req, res)=>{
+  if(!req.body.new){
+    console.log('No new password given');
+    res.send('Specify a new password');
+  } else {
+    var new_password = req.body.new;
+    users[req.session.user] = bcrypt.hashSync(new_password);
+    res.send('Contraseña cambiada para '+req.session.user);
+    console.log('Password changed for '+req.session.user);
+
+  }
+
+
+});
+
 //Cuando accedamos a la ruta "/content" y estemos autenticados, podremos leer el libro.
 app.use( "/content", [ auth, express.static( __dirname + "/book" ) ] );
 
