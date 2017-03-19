@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title Cambiar contraseña
+        link(rel='stylesheet', href="css/styles.css")
+    body
+        form(method="POST", action="/change")
+            label(for="new") NUEVA CONTRASEÑA
+            input(type="password", placeholder="Introduzca la contraseña nueva" name="new")
+            input(type="submit" value="CAMBIAR")

@@ -21,6 +21,7 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-session": "^1.15.1",
+    "jsonfile": "^2.4.0",
     "pug": "^2.0.0-beta11"
   }
 }
