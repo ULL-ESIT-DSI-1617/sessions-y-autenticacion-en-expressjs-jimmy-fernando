@@ -27,9 +27,7 @@ var users = {
 };
 
 //Escribimos esta información en el fichero users.json
-jsonfile.writeFile(file, users, {spaces: 2}, (err)=>{
-  console.error(err);
-});
+jsonfile.writeFileSync(file, users, {spaces: 2});
 
 app.use(session({
     secret: '2C44-4D44-WppQ212',
